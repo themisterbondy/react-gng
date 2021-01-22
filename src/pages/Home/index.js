@@ -1,11 +1,7 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
-import { logout, isAuthenticated } from "../../services/auth";
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import { Link } from "react-router-dom";
 
+class Home extends React.Component {
   render() {
     return (
       <div>

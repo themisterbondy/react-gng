@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link, withRouter, Redirect } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 import api from "../../services/api";
-import { login, isAuthenticated } from "../../services/auth";
+import { login } from "../../services/auth";
 
 class SignIn extends Component {
   state = {
@@ -36,6 +36,7 @@ class SignIn extends Component {
   render() {
     return (
       <div>
+        <p>--{process.env.STRAPI_URL}</p>
         <main className="form-signin">
           <form onSubmit={this.handleSignIn}>
             <img
@@ -71,7 +72,7 @@ class SignIn extends Component {
               onChange={e => this.setState({ password: e.target.value })}
             />
             <button className="w-100 btn btn-lg btn-primary" type="submit">
-              Cadastrar grátis
+              Entrar
             </button>
             <br />
             <Link to="/" className="btn btn-sm">

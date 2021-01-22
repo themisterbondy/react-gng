@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Link, withRouter, Redirect } from "react-router-dom";
+import { Link, withRouter,  } from "react-router-dom";
 
 import api from "../../services/api";
-
-import { isAuthenticated } from "../../services/auth";
 
 class SignUp extends Component {
   state = {

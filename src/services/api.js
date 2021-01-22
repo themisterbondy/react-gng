@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "./auth";
 
 const api = axios.create({
-  baseURL: process.env.STRAPI_URL
+  baseURL: "https://youpet.herokuapp.com/"
 });
 
 api.interceptors.request.use(async config => {
